@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">   
+    <style>
+        table, td, th {
+            border-collapse: collapse;
+            border: .5px solid;
+        }
+    </style>
+    <title>Zing42-Internship Task</title>
+</head>
+<body>
+    <table>
+    <TR>
+        <th>Symbol</th>
+        <th>Series</th>
+        <th>Open</th>
+        <th>High</th>
+        <th>Low</th>
+        <th>Close</th>
+        <th>Last</th>
+        <th>Prev-Close</th>
+        <th>Total Quantity Traded</th>
+        <th>Total Traded Volume</th>
+        <th>Date</th>
+        <th>Total- Trades</th>
+        <th>ISIN Number</th>
+    </TR>
+        {% for q in query %}
+    <TR>
+            {% for x in q %}
+            <TD>{{x}}</TD>
+            {% endfor %}
+    </TR>
+        {% endfor %}
+    </table>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script>
+
+</script>
+
+</html>
