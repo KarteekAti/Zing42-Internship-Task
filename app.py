@@ -83,7 +83,7 @@ def get_Bhav():
         sdate = request.form['sdate']
         edate = request.form['edate']
         date_range = pd.bdate_range(start=sdate, end = edate, 
-                                freq='C', holidays= holidays(2022))
+                                freq='C', holidays= holidays())
         savepath = os.path.join('E:', os.sep, 'Tech','Python','Zing42-Internship','bhavcopy')
         dates_list = [x.date() for x in date_range]
         for dates in dates_list:
